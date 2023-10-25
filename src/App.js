@@ -2,6 +2,12 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
+  const proverbs = ["Stay Hungry, Stay Foolish","Quality is more important than quantity","The only way to do great work is love what you do","Your time is limited So don't waste it living someone else's life"]
+
+  const getRandomIndex = (length) => {
+    return parseInt(Math.random() * length);
+  }
+
   return (
     <div className="App">
       <header className="App-header">
@@ -9,14 +15,7 @@ function App() {
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        {proverbs[getRandomIndex(proverbs.length)]}
       </header>
     </div>
   );
